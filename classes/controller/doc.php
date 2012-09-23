@@ -6,7 +6,7 @@ class Controller_Doc extends Controller {
 
     public function before() {
         parent::before();
-        $config = Kohana::$config->load('vredactor');
+        $config = Kohana::$config->load('iskra-redactor');
     }
 
     /**

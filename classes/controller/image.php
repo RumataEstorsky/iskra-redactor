@@ -6,7 +6,7 @@ class Controller_Image extends Controller {
 
     public function before() {
         parent::before();
-        $this->config = Kohana::$config->load('vredactor')->as_array();
+        $this->config = Kohana::$config->load('iskra-redactor')->as_array();
     }
 
     public function action_upload() {
@@ -38,7 +38,7 @@ class Controller_Image extends Controller {
         copy($file_name, $dir . $new_name);
         
         // отображаем файл
-        echo '<img src="' . $this->config['imageUrlPrefix'] . $new_name . '" />';  
+        echo HTML::image($this->config['imageUrlPrefix'] . $new_name, array('width' => $width, 'height' => $height));
         
         Kohana::$log->add(Log::INFO, "На сервер загружен файл " . $dir .  $new_name);
     }
