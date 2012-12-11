@@ -1,0 +1,3 @@
+[submodule "vendor/redactor-js"]
+	path = vendor/redactor-js
+	url = git://github.com/dybskiy/redactor-js.git
